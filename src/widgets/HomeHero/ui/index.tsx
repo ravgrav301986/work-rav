@@ -16,7 +16,7 @@ const HomeHero: FC<Props> = ({ className }) => {
 	const { screenWidth } = useScreen()
 
 	return (
-		<section className='relative md-mid:min-h-auto min-h-[555px] md-mid:h-auto h-[calc(100vh-var(--header-height))]'>
+		<section className='relative md-mid:min-h-auto min-h-[555px] md-mid:h-auto h-[calc(100vh-var(--header-height))] text-primary-text-PROTECT'>
 			<UiContainer className={cn('h-full', className)}>
 				<div className='md-mid:relative z-[0] md-mid:pl-16 md-mid:pt-16 md-mid:pb-10 pb-12 md-mid:block flex flex-col justify-end h-full'>
 					<UiTypography

@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { UiTypography } from '@/shared/ui/UiTypography'
 import { UiButton } from '@/shared/ui/UiButton'
 import { formatPrice } from '@/shared/lib/formatPrice'
+import { UiGradientBorder } from '@/shared/ui/UiGradientBorder'
 
 interface Props extends TClassName, TServiceItem {
 	Tag?: TTag
@@ -48,11 +49,13 @@ const HomeServiceItem: FC<Props> = ({
 						? 'Часовая оплата'
 						: `от ${formatPrice(fromPrice)} ₽`}
 				</UiTypography>
-				<UiButton theme='outlined' className='uppercase w-max'>
-					<UiTypography font='Montserrat-R' className='main-text-gradient'>
-						Подробнее
-					</UiTypography>
-				</UiButton>
+				<UiGradientBorder className='w-max rounded-lg'>
+					<UiButton theme='outlined' className='uppercase w-max border-none'>
+						<UiTypography font='Montserrat-R' className='main-text-gradient'>
+							Подробнее
+						</UiTypography>
+					</UiButton>
+				</UiGradientBorder>
 			</div>
 		</Tag>
 	)

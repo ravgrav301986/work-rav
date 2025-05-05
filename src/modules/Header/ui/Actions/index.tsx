@@ -7,6 +7,7 @@ import Image from 'next/image'
 import { useScreen } from '@/shared/hooks'
 import { LG_MID } from '@/shared/constants/breakpoints'
 import { BurgerMenuOpen } from '@/features/BurgerMenuOpen'
+import { UiGradientBorder } from '@/shared/ui/UiGradientBorder'
 
 interface Props extends TClassName {}
 
@@ -16,19 +17,21 @@ const Actions: FC<Props> = ({ className }) => {
 	return (
 		<div className={cn('flex lg-big:gap-x-7 gap-x-4', className)}>
 			{screenWidth >= LG_MID ? (
-				<UiButton
-					theme='outlined'
-					className='flex gap-x-2.5 py-1.5 items-center lg-big:text-lg text-base'
-				>
-					<Image
-						src='/images/shared/social/telegram-gradient.svg'
-						alt='telegram'
-						width={19}
-						height={17}
-						priority
-					/>
-					<UiTypography font='Montserrat-M'>Консультация</UiTypography>
-				</UiButton>
+				<UiGradientBorder className='w-max rounded-lg'>
+					<UiButton
+						theme='outlined'
+						className='flex gap-x-2.5 py-1.5 items-center lg-big:text-lg text-base border-none'
+					>
+						<Image
+							src='/images/shared/social/telegram-gradient.svg'
+							alt='telegram'
+							width={19}
+							height={17}
+							priority
+						/>
+						<UiTypography font='Montserrat-M'>Консультация</UiTypography>
+					</UiButton>
+				</UiGradientBorder>
 			) : null}
 			<UiButton
 				theme='fill'

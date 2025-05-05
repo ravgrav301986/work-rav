@@ -15,7 +15,7 @@ export default function RootLayout({
 		<html lang='en'>
 			<body>
 				{children}
-				<div id='modals'></div>
+				<div id='modals' style={{ position: 'relative', zIndex: 100 }}></div>
 			</body>
 		</html>
 	)
