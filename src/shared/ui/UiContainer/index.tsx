@@ -7,8 +7,8 @@ const UiContainer: TUiContainerProps = ({
 	className,
 	...props
 }) => {
-	//@ts-ignore
 	return (
+		//@ts-ignore
 		<Tag
 			className={cn('w-full max-w-[1440px] px-5 mx-auto', className)}
 			{...props}
