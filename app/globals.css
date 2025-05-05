@@ -17,6 +17,7 @@
 
 	--primary-background: #ffffff;
 	--secondary-background: #f7f9fd;
+	--secondary-background-accent: #edf0f7;
 	--third-background: #eef2f6;
 	--foreground: #171717;
 }
@@ -36,6 +37,7 @@
 
 	--color-primary-background: var(--primary-background);
 	--color-secondary-background: var(--secondary-background);
+	--color-secondary-background-accent: var(--secondary-background-accent);
 	--color-third-background: var(--third-background);
 	--color-foreground: var(--foreground);
 

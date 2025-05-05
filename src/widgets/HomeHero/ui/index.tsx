@@ -46,8 +46,8 @@ const HomeHero: FC<Props> = ({ className }) => {
 								: '/images/Home/backgrounds/Hero/main-bg-mobile.png'
 						}
 						alt='Главный фон'
-						width={380}
-						height={555}
+						width={screenWidth >= MD_MID ? 1440 : 380}
+						height={screenWidth >= MD_MID ? 450 : 555}
 						className={cn(
 							'absolute inset-0 size-full object-cover -z-[1] md-mid:rounded-md',
 							{
