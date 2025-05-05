@@ -17,6 +17,7 @@
 
 	--primary-background: #ffffff;
 	--secondary-background: #f7f9fd;
+	--third-background: #eef2f6;
 	--foreground: #171717;
 }
 
@@ -35,6 +36,7 @@
 
 	--color-primary-background: var(--primary-background);
 	--color-secondary-background: var(--secondary-background);
+	--color-third-background: var(--third-background);
 	--color-foreground: var(--foreground);
 
 	/* FONTS */

@@ -15,7 +15,7 @@ const UiLogo: FC<Props> = ({ className, onClick }) => {
 			onClick={onClick}
 			href={ROUTES.home.INDEX}
 			className={cn(
-				'lg-big:w-[143px] xs-big:w-[100px] w-[82px] aspect-[143/50]',
+				'lg-big:w-[143px] xs-big:w-[100px] w-[82px] aspect-[143/50] block',
 				className
 			)}
 		>
