@@ -71,7 +71,15 @@
 		-webkit-background-clip: text;
 		color: transparent;
 	}
+	.backg-checkmark::before {
+		content: '';
+		background-image: url('/images/shared/check-mark.svg');
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
 }
+
 @layer base {
 	@font-face {
 		font-family: Montserrat;
@@ -129,6 +137,9 @@
 		cursor: pointer;
 		text-align: start;
 	}
+	input:focus {
+		outline: none;
+	}
 
 	@media screen and (max-width: 1280px) {
 		body {
@@ -137,6 +148,7 @@
 	}
 	@media screen and (max-width: 480px) {
 		body {
+			--modules-gap: 40px;
 			--header-height: 50.8px;
 		}
 	}

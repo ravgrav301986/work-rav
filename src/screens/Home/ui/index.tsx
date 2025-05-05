@@ -6,6 +6,7 @@ import { HomeAdvantages } from '@/widgets/HomeAdvantages'
 import { HomeAbout } from '@/widgets/HomeAbout'
 import { HomeServices } from '@/widgets/HomeServices'
 import { HomeWorkProcess } from '@/widgets/HomeWorkProcess'
+import { HomeHasQuestions } from '@/widgets/HomeHasQuestions'
 
 interface Props extends TClassName {}
 
@@ -17,6 +18,7 @@ const HomeScreen: FC<Props> = ({ className }) => {
 			<HomeAbout className='mt-[var(--modules-gap)]' />
 			<HomeServices className='mt-[var(--modules-gap)]' />
 			<HomeWorkProcess className='mt-[var(--modules-gap)]' />
+			<HomeHasQuestions className='mt-[var(--modules-gap)]' />
 		</main>
 	)
 }
