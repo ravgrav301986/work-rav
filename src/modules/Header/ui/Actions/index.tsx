@@ -34,7 +34,7 @@ const Actions: FC<Props> = ({ className }) => {
 				theme='fill'
 				className='uppercase lg-big:text-[15px] xs-big:text-sm text-[9px]'
 			>
-				<UiTypography font='Montserrat-M'>Оставить заявку</UiTypography>
+				<UiTypography font='Montserrat-SB'>Оставить заявку</UiTypography>
 			</UiButton>
 			{screenWidth < LG_MID ? <BurgerMenuOpen className='self-center' /> : null}
 		</div>
