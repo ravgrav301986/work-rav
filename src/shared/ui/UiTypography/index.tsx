@@ -12,9 +12,9 @@ type TUiTypographyTextProps = {
 	font: TUiTypographyFonts
 }
 type TUiTypographyPropsFC = TDynamicTagProps<TUiTypographyTextProps>
-type TUiTypographyProps = DynamicTagProps<
+type TUiTypographyProps<T = {}> = DynamicTagProps<
 	keyof JSX.IntrinsicElements,
-	TUiTypographyTextProps
+	TUiTypographyTextProps & T
 >
 
 type TFontInfo = [

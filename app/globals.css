@@ -2,6 +2,7 @@
 
 :root {
 	--header-height: 98px;
+	--modules-gap: 60px;
 
 	--primary-text: #1c1f25;
 	--primary-text-accent: #336aea;
