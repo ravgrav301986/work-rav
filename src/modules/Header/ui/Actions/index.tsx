@@ -25,6 +25,7 @@ const Actions: FC<Props> = ({ className }) => {
 						alt='telegram'
 						width={19}
 						height={17}
+						priority
 					/>
 					<UiTypography font='Montserrat-M'>Консультация</UiTypography>
 				</UiButton>
