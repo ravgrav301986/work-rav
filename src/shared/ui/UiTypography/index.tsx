@@ -1,3 +1,4 @@
+import { cn } from '@/shared/lib/cn'
 import { DynamicTagProps, TDynamicTagProps } from '@/shared/types/shared'
 import { JSX } from 'react'
 
@@ -23,6 +24,7 @@ type TFontInfo = [
 const UiTypography: TUiTypographyPropsFC = ({
 	tag: Tag = 'p',
 	font,
+	className,
 	...props
 }) => {
 	const FONT_INFO: TFontInfo = font.split('-') as TFontInfo
@@ -76,6 +78,7 @@ const UiTypography: TUiTypographyPropsFC = ({
 		//@ts-ignore
 		<Tag
 			{...props}
+			className={cn('!leading-[120%]', className)}
 			style={{
 				fontFamily: FONT_INFO[0],
 				fontWeight: WEIGHT,

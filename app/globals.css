@@ -1,13 +1,18 @@
 @import 'tailwindcss';
 
 :root {
+	--header-height: 98px;
+
 	--primary-text: #1c1f25;
+	--primary-text-accent: #336aea;
 	--secondary-text: #fff;
 	--third-text: #3e3e3e;
 
 	--primary: #336aea;
 	--primaryA: #3164da;
 	--primaryH: #2954b9;
+
+	--primary-invert: #ffffff;
 
 	--primary-background: #ffffff;
 	--foreground: #171717;
@@ -16,11 +21,15 @@
 @theme inline {
 	/* COLORS */
 	--color-primary-text: var(--primary-text);
+	--color-primary-text-accent: var(--primary-text-accent);
 	--color-secondary-text: var(--secondary-text);
 	--color-third-text: var(--third-text);
+
 	--color-primary: var(--primary);
 	--color-primaryA: var(--primaryA);
 	--color-primaryH: var(--primaryH);
+
+	--color-primary-invert: var(--primary-invert);
 
 	--color-primary-background: var(--primary-background);
 	--color-foreground: var(--foreground);
@@ -48,6 +57,18 @@
 	}
 }
 
+@layer utilities {
+	.main-text-gradient {
+		background-image: linear-gradient(
+			35deg,
+			#336aea 0%,
+			#33b7a1 50%,
+			#339eea 100%
+		);
+		-webkit-background-clip: text;
+		color: transparent;
+	}
+}
 @layer base {
 	@font-face {
 		font-family: Montserrat;
@@ -104,5 +125,16 @@
 		display: block;
 		cursor: pointer;
 		text-align: start;
+	}
+
+	@media screen and (max-width: 1280px) {
+		body {
+			--header-height: 84.8px;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		body {
+			--header-height: 50.8px;
+		}
 	}
 }
