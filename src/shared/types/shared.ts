@@ -1,10 +1,10 @@
 import {
-  type ReactNode,
-  type JSX,
-  type Dispatch,
-  type FC,
-  type SetStateAction,
-  SVGProps,
+	type ReactNode,
+	type JSX,
+	type Dispatch,
+	type FC,
+	type SetStateAction,
+	SVGProps,
 } from 'react'
 
 export type TClassName = { className?: string }
@@ -16,12 +16,12 @@ export type TState<T> = Dispatch<SetStateAction<T>>
 
 type FCWithGenerics<P = {}> = FC<P>
 export type DynamicTagProps<
-  T extends keyof JSX.IntrinsicElements = 'div',
-  P = {},
+	T extends keyof JSX.IntrinsicElements = 'div',
+	P = {}
 > = {
-  tag: T
+	tag?: T
 } & JSX.IntrinsicElements[T] &
-  P
+	P
 export type TDynamicTagProps<T = {}> = FCWithGenerics<
-  DynamicTagProps<keyof JSX.IntrinsicElements, T>
+	DynamicTagProps<keyof JSX.IntrinsicElements, T>
 >

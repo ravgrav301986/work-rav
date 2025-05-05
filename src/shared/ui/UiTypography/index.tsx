@@ -20,7 +20,11 @@ type TFontInfo = [
 	string,
 	'T' | 'EL' | 'L' | 'R' | 'M' | 'SB' | 'B' | 'EB' | 'BL' | 'HE'
 ]
-const UiTypography: TUiTypographyPropsFC = ({ tag: Tag, font, ...props }) => {
+const UiTypography: TUiTypographyPropsFC = ({
+	tag: Tag = 'p',
+	font,
+	...props
+}) => {
 	const FONT_INFO: TFontInfo = font.split('-') as TFontInfo
 	let WEIGHT:
 		| 100
