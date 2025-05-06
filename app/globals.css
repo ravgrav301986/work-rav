@@ -61,26 +61,26 @@
 	--breakpoint-xs-low: 321px;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--primary-text: #e0e0e0; /* светлый серый вместо темного */
-		--primary-text-accent: #5a8df1; /* немного ярче исходного синего */
-		--secondary-text: #1c1f25; /* инвертированный (был белый) */
-		--third-text: #b0b0b0; /* светлый серый вместо темного */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-		/* Акцентные цвета остаются без изменений */
-		--primary: #336aea;
-		--primaryA: #3164da;
-		--primaryH: #2954b9;
-		--primary-invert: #ffffff;
+html[data-theme='dark'] {
+	--primary-text: #e0e0e0; /* светлый серый вместо темного */
+	--primary-text-accent: #5a8df1; /* немного ярче исходного синего */
+	--secondary-text: #1c1f25; /* инвертированный (был белый) */
+	--third-text: #b0b0b0; /* светлый серый вместо темного */
 
-		/* Фоновые цвета */
-		--primary-background: #171717; /* темный фон вместо белого */
-		--secondary-background: #1f1f1f; /* чуть светлее основного фона */
-		--secondary-background-accent: #252525; /* акцентный фон */
-		--third-background: #2a2a2a; /* еще светлее */
-		--foreground: #ffffff; /* белый вместо почти черного */
-	}
+	/* Акцентные цвета остаются без изменений */
+	--primary: #336aea;
+	--primaryA: #3164da;
+	--primaryH: #2954b9;
+	--primary-invert: #ffffff;
+
+	/* Фоновые цвета */
+	--primary-background: #171717; /* темный фон вместо белого */
+	--secondary-background: #1f1f1f; /* чуть светлее основного фона */
+	--secondary-background-accent: #252525; /* акцентный фон */
+	--third-background: #2a2a2a; /* еще светлее */
+	--foreground: #ffffff; /* белый вместо почти черного */
 }
 
 @layer utilities {

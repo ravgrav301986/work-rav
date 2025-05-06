@@ -3,6 +3,7 @@ import { TClassName } from '@/shared/types/shared'
 import { cn } from '@/shared/lib/cn'
 import { UiButton } from '@/shared/ui/UiButton'
 import { UiTypography } from '@/shared/ui/UiTypography'
+import { EMAIL } from '@/shared/constants/main-info'
 
 interface Props extends TClassName {}
 
@@ -13,7 +14,7 @@ const Info: FC<Props> = ({ className }) => {
 				<UiTypography font='Montserrat-SB'>Оставить заявку</UiTypography>
 			</UiButton>
 			<UiTypography font='Montserrat-L' className='lg-big:text-[15px] text-xs'>
-				info@rav-coder.ru
+				{EMAIL}
 			</UiTypography>
 		</div>
 	)

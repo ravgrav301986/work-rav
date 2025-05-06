@@ -7,6 +7,8 @@ interface Props extends TChildren {
 }
 
 const IconDecorBorder: FC<Props> = ({ children, hide }) => {
+	console.log(!hide ? 1 : 2)
+
 	return (
 		<>
 			{!hide ? (

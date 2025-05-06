@@ -15,6 +15,8 @@ import { useScreen } from '@/shared/hooks'
 import { LG_MID } from '@/shared/constants/breakpoints'
 import { Content } from './Content'
 import { Actions } from './Actions'
+import { ThemeSwitcher } from '@/segments/ThemeSwitcher'
+import { UiTypography } from '@/shared/ui/UiTypography'
 
 const SLUG = BURGER_MENU
 
@@ -46,7 +48,13 @@ const BurgerMenu: FC<Props> = ({ className }) => {
 					)}
 				>
 					<Header handleClose={handleItemClick} />
-					<Content handleClose={handleItemClick} className='mt-12 mb-25' />
+					<div className='mt-12 mb-25'>
+						<Content handleClose={handleItemClick} />
+						<div className='flex items-center gap-x-3 mt-5'>
+							<ThemeSwitcher />
+							<UiTypography font='Montserrat-R'>Переключить тему</UiTypography>
+						</div>
+					</div>
 					<Actions />
 				</section>
 			) : null}

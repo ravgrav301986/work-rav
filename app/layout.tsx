@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { ThemeLayout } from '@/app/layouts/Theme'
+import { ToastContainer, Slide } from 'react-toastify'
 
 export const metadata: Metadata = {
 	title: 'Create Next App',
@@ -14,8 +16,19 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body>
-				{children}
+				<ThemeLayout>{children}</ThemeLayout>
 				<div id='modals' style={{ position: 'relative', zIndex: 100 }}></div>
+				<ToastContainer
+					position='bottom-center'
+					autoClose={1200}
+					limit={2}
+					newestOnTop
+					closeOnClick
+					rtl={false}
+					draggable
+					theme='light'
+					transition={Slide}
+				/>
 			</body>
 		</html>
 	)

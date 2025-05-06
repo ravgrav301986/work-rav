@@ -1,3 +1,8 @@
+const HOME_ABOUT_ANCHOR = 'home-about-anchor'
+const HOME_SERVICES_ANCHOR = 'home-services-anchor'
+const HOME_WORK_PROCESS_ANCHOR = 'home-work-process-anchor'
+const HOME_CONTACTS_ANCHOR = 'home-contacts-anchor'
+
 export const ROUTES = {
 	home: {
 		INDEX: '/',
@@ -6,19 +11,19 @@ export const ROUTES = {
 
 export const MAIN_NAVIGATION = [
 	{
-		link: '#',
+		link: `${ROUTES.home.INDEX}#${HOME_ABOUT_ANCHOR}`,
 		text: 'О компании',
 	},
 	{
-		link: '#',
+		link: `${ROUTES.home.INDEX}#${HOME_SERVICES_ANCHOR}`,
 		text: 'Услуги',
 	},
 	{
-		link: '#',
+		link: `${ROUTES.home.INDEX}#${HOME_WORK_PROCESS_ANCHOR}`,
 		text: 'Процесс работы',
 	},
 	{
-		link: '#',
+		link: `${ROUTES.home.INDEX}#${HOME_CONTACTS_ANCHOR}`,
 		text: 'Контакты',
 	},
 ]

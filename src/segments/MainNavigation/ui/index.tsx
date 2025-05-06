@@ -11,14 +11,15 @@ interface Props extends TClassName {
 
 const MainNavigation: FC<Props> = ({ className, handleItemClick }) => {
 	return (
-		<nav className={cn('flex lg-big:gap-x-12 gap-x-8', className)}>
+		<nav
+			className={cn(
+				'flex lg-big:gap-x-12 gap-x-8 text-[15px] text-third-text',
+				className
+			)}
+		>
 			{MAIN_NAVIGATION.map(({ link, text }) => {
 				return (
-					<Link
-						href={link}
-						className='text-[15px] text-third-text'
-						onClick={handleItemClick}
-					>
+					<Link href={link} onClick={handleItemClick}>
 						<UiTypography font='Montserrat-M'>{text}</UiTypography>
 					</Link>
 				)
