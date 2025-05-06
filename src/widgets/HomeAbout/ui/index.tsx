@@ -10,6 +10,7 @@ import Image from 'next/image'
 import { UiTypography } from '@/shared/ui/UiTypography'
 import { useScreen } from '@/shared/hooks'
 import { LG_BIG } from '@/shared/constants/breakpoints'
+import { HOME_ABOUT_ANCHOR } from '@/shared/constants/routes'
 
 interface Props extends TClassName {}
 
@@ -17,7 +18,11 @@ const HomeAbout: FC<Props> = ({ className }) => {
 	const { screenWidth } = useScreen()
 
 	return (
-		<UiContainer tag='section' className={cn('', className)}>
+		<UiContainer
+			tag='section'
+			className={cn('', className)}
+			id={HOME_ABOUT_ANCHOR}
+		>
 			<div className='flex justify-between bg-primary-background gap-x-14 lg-big:pl-10 lg-big:pr-0 px-5 rounded-lg overflow-hidden'>
 				<div className='flex-1 lg-big:py-10 py-7'>
 					<UiDecorationTitle className='lg-big:text-3xl text-2xl'>

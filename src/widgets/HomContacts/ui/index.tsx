@@ -6,6 +6,7 @@ import { UiDecorationTitle } from '@/shared/ui/UiDecorationTitle'
 import { UiTypography } from '@/shared/ui/UiTypography'
 import { EMAIL, PHONES } from '@/shared/constants/main-info'
 import { Item } from './Item'
+import { HOME_CONTACTS_ANCHOR } from '@/shared/constants/routes'
 
 const copyTextCls = 'xs-big:w-[200px] flex-1 text-center text-[15px]'
 
@@ -13,7 +14,11 @@ interface Props extends TClassName {}
 
 const HomContacts: FC<Props> = ({ className }) => {
 	return (
-		<UiContainer tag='section' className={cn('', className)}>
+		<UiContainer
+			tag='section'
+			className={cn('', className)}
+			id={HOME_CONTACTS_ANCHOR}
+		>
 			<div className='md-mid:py-10 py-7 md-mid:px-7 px-5 rounded-lg bg-primary-background'>
 				<UiDecorationTitle className='md-mid:text-3xl text-2xl'>
 					Контакты

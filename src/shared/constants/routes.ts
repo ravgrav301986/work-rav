@@ -1,7 +1,7 @@
-const HOME_ABOUT_ANCHOR = 'home-about-anchor'
-const HOME_SERVICES_ANCHOR = 'home-services-anchor'
-const HOME_WORK_PROCESS_ANCHOR = 'home-work-process-anchor'
-const HOME_CONTACTS_ANCHOR = 'home-contacts-anchor'
+export const HOME_ABOUT_ANCHOR = 'home-about-anchor'
+export const HOME_SERVICES_ANCHOR = 'home-services-anchor'
+export const HOME_WORK_PROCESS_ANCHOR = 'home-work-process-anchor'
+export const HOME_CONTACTS_ANCHOR = 'home-contacts-anchor'
 
 export const ROUTES = {
 	home: {

@@ -14,7 +14,7 @@ interface Props extends TClassName {}
 const HomeScreen: FC<Props> = ({ className }) => {
 	return (
 		<main className={cn('', className)}>
-			<HomeHero />
+			<HomeHero className='mt-5' />
 			<HomeAdvantages className='mt-5' />
 			<HomeAbout className='mt-[var(--modules-gap)]' />
 			<HomeServices className='mt-[var(--modules-gap)]' />

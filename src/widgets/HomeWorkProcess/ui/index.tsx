@@ -5,12 +5,17 @@ import { cn } from '@/shared/lib/cn'
 import { UiDecorationTitle } from '@/shared/ui/UiDecorationTitle'
 import { UiTypography } from '@/shared/ui/UiTypography'
 import { Content } from './Content'
+import { HOME_WORK_PROCESS_ANCHOR } from '@/shared/constants/routes'
 
 interface Props extends TClassName {}
 
 const HomeWorkProcess: FC<Props> = ({ className }) => {
 	return (
-		<UiContainer tag='section' className={cn('', className)}>
+		<UiContainer
+			tag='section'
+			className={cn('', className)}
+			id={HOME_WORK_PROCESS_ANCHOR}
+		>
 			<div className='md-mid:py-10 py-7 md-mid:px-7 px-5 rounded-lg bg-primary-background'>
 				<UiDecorationTitle className='md-mid:text-3xl text-2xl'>
 					Процесс работы (Workflow)

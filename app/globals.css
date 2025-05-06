@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 :root {
-	--header-height: 98px;
+	--header-height: 170.81px;
 	--modules-gap: 60px;
 
 	--primary-text: #1c1f25;
@@ -163,8 +163,17 @@ html[data-theme='dark'] {
 	input:focus {
 		outline: none;
 	}
+	* {
+		scroll-behavior: smooth;
+		scroll-margin-top: calc(var(--header-height) + 15px);
+	}
 
 	@media screen and (max-width: 1280px) {
+		body {
+			--header-height: 157.61px;
+		}
+	}
+	@media screen and (max-width: 1024px) {
 		body {
 			--header-height: 84.8px;
 		}
