@@ -1,5 +1,5 @@
 # Шаг 1: Билд-стадия
-FROM ghcr.io/nodejs/node:18-alpine AS builder
+FROM public.ecr.aws/docker/library/node:18-alpine
 
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
