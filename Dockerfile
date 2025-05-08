@@ -1,5 +1,5 @@
 # Шаг 1: Билд-стадия (сборка приложения)
-FROM node:18-alpine AS builder
+FROM ghcr.io/nodejs/node:18-alpine AS builder
 
 # Устанавливаем зависимости для работы с npm и кешируем их
 RUN apk add --no-cache libc6-compat
