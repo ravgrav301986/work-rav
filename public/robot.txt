@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://ravcoder.ru/
-
-# Sitemap
-Sitemap: https://ravcoder.ru/sitemap.xml
