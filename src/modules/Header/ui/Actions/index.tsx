@@ -29,7 +29,7 @@ const Actions: FC<Props> = ({ className }) => {
 							height={17}
 							priority
 						/>
-						<UiTypography font='Montserrat-M'>Консультация</UiTypography>
+						<UiTypography font='Montserrat-M'><a href="https://t.me/Ravcoder"> Консультация</a></UiTypography>
 					</UiButton>
 				</UiGradientBorder>
 			) : null}
