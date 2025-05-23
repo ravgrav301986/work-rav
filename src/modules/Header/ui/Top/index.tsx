@@ -35,7 +35,7 @@ const Top: FC<Props> = ({ className }) => {
 					Tag='li'
 					icon={<Globe size={18} color='var(--color-primary-text-accent)' />}
 				>
-					Работа на удаленке
+					Работаем на удаленке
 				</MetaInfoItem>
 				<MetaInfoItem
 					className={itemCls}
