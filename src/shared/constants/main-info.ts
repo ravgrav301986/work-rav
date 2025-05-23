@@ -1,7 +1,7 @@
 export const PHONES = [
 	{
 		data: '79263970975',
-		formatted: '+7 926 397 09-75',
+		formatted: '+7 926 397 09-78',
 	},
 	{
 		data: '79162914962',
