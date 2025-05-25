@@ -42,7 +42,7 @@ const BurgerMenu: FC<Props> = ({ className }) => {
 			{mountedState && screenWidth < LG_MID ? (
 				<section
 					className={cn(
-						'fixed inset-0 bg-primary-background px-5 pt-2.5 pb-7 duration-[400ms] overflow-auto',
+						'fixed inset-0 bg-primary-background px-4 pt-2.5 pb-7 duration-[400ms] overflow-auto',
 						{ ['translate-x-full']: !visibleState },
 						className
 					)}

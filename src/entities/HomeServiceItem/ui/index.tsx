@@ -47,7 +47,7 @@ const HomeServiceItem: FC<Props> = ({
 				>
 					{fromPrice === 'hours'
 						? 'Часовая оплата'
-						: `от ${formatPrice(fromPrice)} ₽`}
+						: `от ${formatPrice(fromPrice)} ₽  / за час`}
 				</UiTypography>
 				<UiGradientBorder className='w-max rounded-lg'>
 					<UiButton theme='outlined' className='uppercase w-max border-none'>

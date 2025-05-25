@@ -3,23 +3,24 @@ import { TServiceItem } from '@/entities/HomeServiceItem/types/Service'
 export const SERVICES: TServiceItem[] = [
 	{
 		description:
-			'Мы создаем цифровые продукты, которые помогают бизнесу расти, обеспечивая удобство',
+			'Создаем надежные решения для любых задач, обеспечивая рост и стабильность бизнеса',
 		fromPrice: 400000,
+		
 		icon: '/images/Home/vectors/Services/web-dev.svg',
 		id: 1,
 		title: 'Разработка веб-сайтов и приложений',
 	},
 	{
 		description:
-			'Мы создаем цифровые продукты, которые помогают бизнесу расти, обеспечивая удобство',
-		fromPrice: 7000,
+			'Проектируем интерфейсы, где каждая деталь работает на удобство и вовлеченность клиента',
+		fromPrice: 7000  ,
 		icon: '/images/Home/vectors/Services/design.svg',
 		id: 2,
-		title: 'UI/UX-дизайн',
+		title: 'UI/UX-дизайн ',
 	},
 	{
 		description:
-			'Мы создаем цифровые продукты, которые помогают бизнесу расти, обеспечивая удобство',
+			'Обеспечиваем бесперебойную работу и быстро решаем задачи, сохраняя ваш комфорт',
 		fromPrice: 'hours',
 		icon: '/images/Home/vectors/Services/support.svg',
 		id: 3,
@@ -27,7 +28,7 @@ export const SERVICES: TServiceItem[] = [
 	},
 	{
 		description:
-			'Мы создаем цифровые продукты, которые помогают бизнесу расти, обеспечивая удобство',
+			'Продвигаем сайты в поиске и улучшаем видимость, привлекая целевую аудиторию бизнеса',
 		fromPrice: 7000,
 		icon: '/images/Home/vectors/Services/seo.svg',
 		id: 4,
