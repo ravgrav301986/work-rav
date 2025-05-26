@@ -22,12 +22,12 @@ const Actions: FC<Props> = ({ className }) => {
 						width={15}
 						height={14}
 					/>
-					<UiTypography font='Montserrat-M'>Консультация </UiTypography>
+					<UiTypography font='Montserrat-M'><a href="https://t.me/Ravcoder">Консультация</a> </UiTypography>
 					
 				</UiButton>
 			</UiGradientBorder>
 			<UiButton theme='fill' className='uppercase text-[11px] py-2'>
-				<UiTypography font='Montserrat-M'>Оставить заявку</UiTypography>
+				<UiTypography font='Montserrat-M'><a href="https://t.me/Ravcoderbot_bot">Оставить заявку</a></UiTypography>
 			</UiButton>
 		</div>
 	)
