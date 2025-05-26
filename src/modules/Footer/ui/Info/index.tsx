@@ -11,7 +11,7 @@ const Info: FC<Props> = ({ className }) => {
 	return (
 		<div className={cn('flex flex-col md-mid:items-end gap-y-4', className)}>
 			<UiButton theme='fill' className='w-max'>
-				<UiTypography font='Montserrat-SB'>Оставить заявку</UiTypography>
+				<UiTypography font='Montserrat-SB'><a href="https://t.me/Ravcoderbot_bot">Оставить заявку</a></UiTypography>
 			</UiButton>
 			<UiTypography font='Montserrat-L' className='lg-big:text-[15px] text-xs'>
 				{EMAIL}

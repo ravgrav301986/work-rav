@@ -52,7 +52,7 @@ const HomeServiceItem: FC<Props> = ({
 				<UiGradientBorder className='w-max rounded-lg'>
 					<UiButton theme='outlined' className='uppercase w-max border-none'>
 						<UiTypography font='Montserrat-R' className='main-text-gradient'>
-							Подробнее
+							<a href="https://t.me/Ravcoder">Подробнее</a>
 						</UiTypography>
 					</UiButton>
 				</UiGradientBorder>

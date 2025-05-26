@@ -37,7 +37,7 @@ const HomeHero: FC<Props> = ({ className }) => {
 						</UiTypography>
 					)}
 					<UiButton theme='fill-invert' className='uppercase w-max'>
-						<UiTypography font='Montserrat-SB'>Заказать проект</UiTypography>
+						<UiTypography font='Montserrat-SB'><a href="https://t.me/Ravcoderbot_bot">Заказать проект</a></UiTypography>
 					</UiButton>
 					<Image
 						src={

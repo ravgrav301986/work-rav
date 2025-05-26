@@ -42,7 +42,7 @@ const HomeAbout: FC<Props> = ({ className }) => {
 						theme='fill'
 						className='uppercase md-mid:w-auto w-full text-center'
 					>
-						<UiTypography font='Montserrat-SB'>Узнать больше</UiTypography>
+						<UiTypography font='Montserrat-SB'><a href="https://t.me/Ravcoder">Узнать больше</a></UiTypography>
 					</UiButton>
 				</div>
 				{screenWidth >= LG_BIG ? (
