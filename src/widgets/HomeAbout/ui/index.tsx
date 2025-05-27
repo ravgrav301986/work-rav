@@ -47,7 +47,7 @@ const HomeAbout: FC<Props> = ({ className }) => {
 				</div>
 				{screenWidth >= LG_BIG ? (
 					<Image
-						src='/images/Home/illustrations/About/bird.png'
+						src='/images/Home/illustrations/About/bird2.png'
 						alt='Красивая картинка'
 						width={652}
 						height={503}
