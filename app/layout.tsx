@@ -21,8 +21,8 @@ export default function RootLayout({
 	return (
 		<html lang='ru'>
 			<Head>
+		    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			<meta name="yandex-verification" content="e30a47380f9a2208" />
-			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
 			</Head>
 			<body>
 				<ThemeLayout>{children}</ThemeLayout>
