@@ -2,11 +2,13 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { ThemeLayout } from '@/app/layouts/Theme'
 import { ToastContainer, Slide } from 'react-toastify'
+import Head from 'next/head'
 
 export const metadata: Metadata = {
 	title: 'Ravcoder',
 	description:
 		'Профессиональная разработка веб-сайтов и мобильных приложений для бизнеса. Создаем удобные, функциональные и стильные цифровые продукты с индивидуальным подходом. Полный цикл услуг: проектирование UI/UX, программирование, оптимизация и поддержка.',
+	
 }
 
 export default function RootLayout({
@@ -15,7 +17,11 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='en'>
+		<html lang='ru'>
+			<Head>
+			<meta name="yandex-verification" content="e30a47380f9a2208" />
+			
+			</Head>
 			<body>
 				<ThemeLayout>{children}</ThemeLayout>
 				<div id='modals' style={{ position: 'relative', zIndex: 100 }}></div>
