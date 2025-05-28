@@ -4,7 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: 'https://ravcoder.ru',
-      priority: 2.0 ,
+      priority: 1.0 ,
     },
    
   ]
