@@ -23,6 +23,7 @@ export default function RootLayout({
 			<Head>
 		    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			<meta name="yandex-verification" content="e30a47380f9a2208" />
+			<meta name="google-site-verification" content="_EiG94FPoBoK8WMppe9gBnO6jORUyFy--VP2jtWsdOc" />
 			<link rel="icon" href="/favicon.ico" sizes="any" />
 		    </Head>
 			<body>
