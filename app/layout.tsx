@@ -25,8 +25,8 @@ export default function RootLayout({
 		    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			<meta name="yandex-verification" content="e30a47380f9a2208" />
 			<meta name="google-site-verification" content="_EiG94FPoBoK8WMppe9gBnO6jORUyFy--VP2jtWsdOc" />
-			<link rel="icon" href="/favicon.ico" sizes="any" />
-		    </Head>
+			 <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon"></link>
+           </Head>
 			<body>
 				<ThemeLayout>{children}</ThemeLayout>
 				<div id='modals' style={{ position: 'relative', zIndex: 100 }}></div>
