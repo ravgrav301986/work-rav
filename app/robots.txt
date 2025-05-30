@@ -1,4 +1,8 @@
-User-agent: 
+ User-agent: Yandex
+
+ User-agent: Google
+Allow: /
 Crawl-delay: 1
 Host: https://ravcoder.ru
 Sitemap: http://https://ravcoder.ru
+sitemap: https://ravcoder/site_structure/my_sitemaps1.xml
