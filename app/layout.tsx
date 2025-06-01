@@ -4,6 +4,7 @@ import { ThemeLayout } from '@/app/layouts/Theme'
 import { ToastContainer, Slide } from 'react-toastify'
 import Head from 'next/head'
 
+
 export const metadata: Metadata = {
 	title: 'Ravcoder',
 	description:
@@ -25,7 +26,7 @@ export default function RootLayout({
 		    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 			<meta name="yandex-verification" content="e30a47380f9a2208" />
 			<meta name="google-site-verification" content="_EiG94FPoBoK8WMppe9gBnO6jORUyFy--VP2jtWsdOc" />
-			 <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon"></link>
+			 <link  rel="icon" href="https://ravcoder.ru/favicon.ico" type="image/x-icon" ></link>
            </Head>
 			<body>
 				<ThemeLayout>{children}</ThemeLayout>
