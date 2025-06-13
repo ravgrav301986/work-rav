@@ -4,4 +4,4 @@
 Allow: /
 Crawl-delay: 1
 Host: https://ravcoder.ru
-Sitemap: https://ravcoder.ru/site_structure/sitemap.xml
+Sitemap: https://ravcoder.ru/sitemap.xml
