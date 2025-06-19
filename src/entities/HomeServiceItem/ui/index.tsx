@@ -41,14 +41,16 @@ const HomeServiceItem: FC<Props> = ({
 				<UiTypography font='Montserrat-R' className='text-sm mt-auto'>
 					{description}
 				</UiTypography>
-				<UiTypography
-					font='Montserrat-B'
-					className='text-xl main-text-gradient mt-3 mb-5'
-				>
-					{fromPrice === 'hours'
-						? 'Часовая оплата'
-						: `от ${formatPrice(fromPrice)} ₽  / за час`}
-				</UiTypography>
+				{fromPrice && (
+					<UiTypography
+						font='Montserrat-B'
+						className='text-xl main-text-gradient mt-3 mb-5'
+					>
+						{fromPrice === 'hours'
+							? 'Часовая оплата'
+							: `от ${formatPrice(fromPrice as number)} ₽  / за час`}
+					</UiTypography>
+				)}
 				<UiGradientBorder className='w-max rounded-lg'>
 					<UiButton theme='outlined' className='uppercase w-max border-none'>
 						<UiTypography font='Montserrat-R' className='main-text-gradient'>

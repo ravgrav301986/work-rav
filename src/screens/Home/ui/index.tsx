@@ -20,7 +20,7 @@ const HomeScreen: FC<Props> = ({ className }) => {
 			<HomeServices className='mt-[var(--modules-gap)]' />
 			<HomeWorkProcess className='mt-[var(--modules-gap)]' />
 			<HomeHasQuestions className='mt-[var(--modules-gap)]' />
-			<HomContacts className='mt-[var(--modules-gap)]' />
+			{/* <HomContacts className='mt-[var(--modules-gap)]' /> */}
 		</main>
 	)
 }

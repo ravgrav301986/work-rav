@@ -3,5 +3,5 @@ export type TServiceItem = {
 	icon: string
 	title: string
 	description: string
-	fromPrice: number | 'hours'
+	fromPrice?: number | 'hours'
 }

@@ -1,25 +1,24 @@
 import { FC } from 'react'
-import { TClassName } from '@/shared/types/shared'
 import { UiContainer } from '@/shared/ui/UiContainer'
-import { cn } from '@/shared/lib/cn'
 import { UiDecorationTitle } from '@/shared/ui/UiDecorationTitle'
 import { HomeServiceItem } from '@/entities/HomeServiceItem'
-import { SERVICES } from '../constants/services'
+import { NEWS_POSTS } from './constants'
+import { Metadata } from 'next'
 
-interface Props extends TClassName {}
+export const metadata: Metadata = {
+	title: 'Новости | Rav.Coder',
+	description: 'Следите за последними новостями и обновлениями нашей компании.',
+}
 
-const HomeServices: FC<Props> = ({ className }) => {
+const NewsScreen: FC = () => {
 	return (
-		<UiContainer
-			tag='section'
-			className={cn('', className)}
-		>
+		<UiContainer>
 			<div className='md-mid:py-10 py-7 md-mid:px-7 px-5 rounded-lg bg-primary-background'>
 				<UiDecorationTitle className='md-mid:text-3xl text-2xl'>
-					Услуги
+					Новости
 				</UiDecorationTitle>
 				<ul className='grid lg-big:grid-cols-4 md-mid:grid-cols-2 xs-big:gap-5 gap-y-2.5 mt-5'>
-					{SERVICES.map(data => (
+					{NEWS_POSTS.map(data => (
 						<HomeServiceItem key={data.id} {...data} Tag='li' />
 					))}
 				</ul>
@@ -28,4 +27,4 @@ const HomeServices: FC<Props> = ({ className }) => {
 	)
 }
 
-export { HomeServices }
+export default NewsScreen 

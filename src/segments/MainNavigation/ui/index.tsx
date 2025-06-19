@@ -19,7 +19,7 @@ const MainNavigation: FC<Props> = ({ className, handleItemClick }) => {
 		>
 			{MAIN_NAVIGATION.map(({ link, text }) => {
 				return (
-					<Link href={link} onClick={handleItemClick}>
+					<Link href={link} onClick={handleItemClick} key={link}>
 						<UiTypography font='Montserrat-M'>{text}</UiTypography>
 					</Link>
 				)
