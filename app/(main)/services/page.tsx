@@ -17,7 +17,7 @@ import React from 'react';
 	title: 'Услуги | Rav.Coder',
 	description: 'Ознакомьтесь с полным спектром наших услуг, включая веб-разработку, UI/UX дизайн, техническую поддержку и SEO-продвижение.',
 }
-    const Serveces = () => {
+    const Services = () => {
 			const { screenWidth } = useScreen()
 		
      return (
@@ -154,4 +154,4 @@ import React from 'react';
   );
 }
 
-export default Serveces;
+export default Services;

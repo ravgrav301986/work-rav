@@ -3,7 +3,7 @@ export const ROUTES = {
 		INDEX: '/',
 	},
 	about: '/about',
-	serveces: '/serveces',
+	services: '/services',
 	workProcess: '/work-process',
 	contacts: '/contacts',
 	blog: '/blog',
@@ -16,7 +16,7 @@ export const MAIN_NAVIGATION = [
 		text: 'О компании',
 	},
 	{
-		link: ROUTES.serveces,
+		link: ROUTES.services,
 		text: 'Услуги',
 	},
 	{
