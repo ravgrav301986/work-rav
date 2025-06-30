@@ -10,6 +10,7 @@ const MainLayout: FC<Props> = ({ children }) => {
 	return (
 		<>
 			<Header />
+			
 			<BurgerMenu />
 			{children}
 			<Footer className='mt-[var(--modules-gap)]' />
