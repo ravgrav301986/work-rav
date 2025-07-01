@@ -21,10 +21,10 @@ import React from 'react';
 			const { screenWidth } = useScreen()
 		
      return (
-		<section className='md-mid:py-10 py-7 md-mid:px-7 px-5'>
+		<section className='md-mid:py-10 py-7  md-mid:px-7 px-5'>
 	     <UiContainer className={cn('h-full', useBodyClassName)}>
-				<UiDecorationTitle className='md-mid:text-3xl text-2xl'>
-					Услуги
+				<UiDecorationTitle className=' md-mid:text-3xl text-2xl'>
+					Услуг
 				</UiDecorationTitle>
 				<div className='md-mid:relative z-[0] md-mid:pl-16 md-mid:pt-16 md-mid:pb-10 pb-25 md-mid:block flex flex-col justify-end h-full text-amber-50'>
 					
