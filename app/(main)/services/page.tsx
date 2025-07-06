@@ -20,7 +20,7 @@ import  { Metadata } from 'next'
 		<section className='md-mid:py-10 py-7  md-mid:px-7 px-5'>
 	     <UiContainer >
 				<UiDecorationTitle className=' md-mid:text-3xl text-2xl'>
-					Услуг
+					Услуги
 				</UiDecorationTitle>
 				<div className='md-mid:relative z-[0] md-mid:pl-16 md-mid:pt-16 md-mid:pb-10 pb-25 md-mid:block flex flex-col justify-end h-full text-amber-50'>
 					
