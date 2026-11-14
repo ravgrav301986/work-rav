@@ -1,5 +1,5 @@
 # Шаг 1: Билд-стадия
-FROM public.ecr.aws/docker/library/node:18-alpine AS builder
+FROM node:18-alpine AS builder
 
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
@@ -9,7 +9,7 @@ COPY . .
 RUN npm run build
 
 # Шаг 2: Продакшн-стадия
-FROM public.ecr.aws/docker/library/node:18-alpine
+FROM node:18-alpine
 WORKDIR /app
 ENV NODE_ENV production
 COPY --from=builder /app/.next ./.next
