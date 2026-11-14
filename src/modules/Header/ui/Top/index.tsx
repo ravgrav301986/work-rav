@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { TClassName } from '@/shared/types/shared'
 import { cn } from '@/shared/lib/cn'
-import { EMAIL, PHONES } from '@/shared/constants/main-info'
+import { EMAIL } from '@/shared/constants/main-info'
 import { UiContainer } from '@/shared/ui/UiContainer'
-import { CodeXml, Globe, Watch, Mail, Phone } from 'lucide-react'
+import { CodeXml, Globe, Watch, Mail } from 'lucide-react'
 import { MetaInfoItem } from '../MetaInfoItem'
 import Link from 'next/link'
 
@@ -21,7 +21,7 @@ const Top: FC<Props> = ({ className }) => {
 		>
 			<UiContainer
 				tag='ul'
-				className='text-primary-text-accent gap-3 grid lg-mid:grid-cols-5 md-low:grid-cols-3'
+				className='text-primary-text-accent gap-3 grid lg-mid:grid-cols-4 md-low:grid-cols-2'
 			>
 				<MetaInfoItem
 					className={itemCls}
@@ -50,14 +50,6 @@ const Top: FC<Props> = ({ className }) => {
 					icon={<Mail size={18} color='var(--color-primary-text-accent)' />}
 				>
 					<Link href={`mailto:${EMAIL}`}>{EMAIL}</Link>
-				</MetaInfoItem>
-				<MetaInfoItem
-					className={itemCls}
-					Tag='li'
-					icon={<Phone size={18} color='var(--color-primary-text-accent)' />}
-				>
-					<Link href={`tel:${PHONES[0].data}`}>{PHONES[0].formatted}</Link>
-					<Link href={`tel:${PHONES[1].data}`}>{PHONES[1].formatted}</Link>
 				</MetaInfoItem>
 			</UiContainer>
 		</div>

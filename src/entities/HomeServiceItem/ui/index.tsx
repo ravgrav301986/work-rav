@@ -28,36 +28,38 @@ const HomeServiceItem: FC<Props> = ({
 				className
 			)}
 		>
-			<div className='p-5 bg-primary-background rounded-[inherit] flex flex-col'>
+			<div className='p-5 bg-primary-background rounded-[inherit] flex flex-col w-full'>
 				<Image
 					src={icon}
 					alt={`Иконка для "${title}"`}
 					width={48}
 					height={48}
 				/>
-				<UiTypography font='Montserrat-M' className='text-lg my-3'>
+				<UiTypography font='Montserrat-M' className='text-lg mt-3 mb-2'>
 					{title}
 				</UiTypography>
-				<UiTypography font='Montserrat-R' className='text-sm mt-auto'>
+				<UiTypography font='Montserrat-R' className='text-sm mb-4'>
 					{description}
 				</UiTypography>
-				{fromPrice && (
-					<UiTypography
-						font='Montserrat-B'
-						className='text-xl main-text-gradient mt-3 mb-5'
-					>
-						{fromPrice === 'hours'
-							? 'Часовая оплата'
-							: `от ${formatPrice(fromPrice as number)} ₽  / за час`}
-					</UiTypography>
-				)}
-				<UiGradientBorder className='w-max rounded-lg'>
-					<UiButton theme='outlined' className='uppercase w-max border-none'>
-						<UiTypography font='Montserrat-R' className='main-text-gradient'>
-							<a href="https://t.me/Ravcoder">Подробнее</a>
+				<div className='mt-auto'>
+					{fromPrice && (
+						<UiTypography
+							font='Montserrat-B'
+							className='text-xl main-text-gradient mb-5'
+						>
+							{fromPrice === 'hours'
+								? 'Часовая оплата'
+								: `от ${formatPrice(fromPrice as number)} ₽ / за час`}
 						</UiTypography>
-					</UiButton>
-				</UiGradientBorder>
+					)}
+					<UiGradientBorder className='w-max rounded-lg'>
+						<UiButton theme='outlined' className='uppercase w-max border-none'>
+							<UiTypography font='Montserrat-R' className='main-text-gradient'>
+								<a href='https://t.me/Ravcoder'>Подробнее</a>
+							</UiTypography>
+						</UiButton>
+					</UiGradientBorder>
+				</div>
 			</div>
 		</Tag>
 	)

@@ -1,7 +1,9 @@
-export type TServiceItem = {
+import { ReactNode } from 'react'
+
+export interface TServiceItem {
 	id: number
+	title: ReactNode
+	description: ReactNode
 	icon: string
-	title: string
-	description: string
 	fromPrice?: number | 'hours'
 }
