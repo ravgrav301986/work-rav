@@ -33,19 +33,12 @@ const Form: FC<Props> = ({ className }) => {
 		setIsLoading(true)
 
 		try {
-			const response = await fetch('https://web3forms.com', {
+			const response = await fetch('/api/send-lead', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
-					Accept: 'application/json',
 				},
-				body: JSON.stringify({
-					access_key: 'ВСТАВЬТЕ_СЮДА_ВАШ_КЛЮЧ_ИЗ_ПИСЬМА',
-					subject: 'Новая заявка с сайта RAV:Coder',
-					from_name: 'Сайт ravcoder.ru',
-					Имя: name,
-					Email: email,
-				}),
+				body: JSON.stringify({ name, email }),
 			})
 
 			const result = await response.json()
@@ -58,7 +51,7 @@ const Form: FC<Props> = ({ className }) => {
 				toast.error('Не удалось отправить заявку. Попробуйте позже.')
 			}
 		} catch {
-			toast.error('Ошибка сети. Проверьте подключение к интернету.')
+			toast.error('Ошибка сети. Попробуйте позже.')
 		} finally {
 			setIsLoading(false)
 		}
