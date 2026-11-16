@@ -2,6 +2,7 @@ import { TServiceItem } from '@/entities/HomeServiceItem/types/Service'
 
 export interface IBlogPost extends TServiceItem {
 	slug: string
+	link?: string
 	plainTitle: string
 	plainDescription: string
 	date: string
@@ -12,6 +13,7 @@ export interface IBlogPost extends TServiceItem {
 		bullets?: string[]
 	}[]
 }
+
 
 export const BLOG_POSTS: IBlogPost[] = [
 	{
