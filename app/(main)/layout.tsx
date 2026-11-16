@@ -6,7 +6,7 @@ import { MainLayout } from '@/app/layouts/Main'
 export const metadata: Metadata = {
 	title: {
 		default: 'RAV:Coder — Робототехника на C++ и Python, нейросети и веб-разработка',
-		template: '%s | RAV:Coder',
+		template: '%s',
 	},
 	description:
 		'IT-студия RAV:Coder: программирование роботов и умных систем на C++ и Python, внедрение нейросетей и ИИ, разработка современных сайтов, мобильных приложений и UI/UX-дизайн под ключ.',
