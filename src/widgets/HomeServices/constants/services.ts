@@ -1,44 +1,37 @@
 import { TServiceItem } from '@/entities/HomeServiceItem/types/Service'
 
+
 export const SERVICES: TServiceItem[] = [
 	{
 		description:
-			'Создаем надежные решения для любых задач, обеспечивая рост и стабильность бизнеса',
-		fromPrice: 400000,
-		icon: '/images/Home/vectors/Services/web-dev.svg',
+			'Программируем роботов и умные системы на C++ и Python: алгоритмы движения, логика поведения и компьютерное зрение под ваши задачи',
+		fromPrice: 20000,
+		icon: '/images/Home/vectors/Services/support.svg',
 		id: 1,
+		title: 'Робототехника на C++ и Python',
+	},
+	{
+		description:
+			'Создаем надежные веб-сайты, сервисы и мобильные приложения для любых задач, обеспечивая рост и стабильность бизнеса',
+		fromPrice: 15000,
+		icon: '/images/Home/vectors/Services/web-dev.svg',
+		id: 2,
 		title: 'Разработка веб-сайтов и приложений',
 	},
 	{
 		description:
-			'Проектируем интерфейсы, где каждая деталь работает на удобство и вовлеченность клиента',
-		fromPrice: 7000,
+			'Проектируем интерфейсы, где каждая деталь работает на удобство, эстетику и вовлеченность клиента',
+		fromPrice: 10000,
 		icon: '/images/Home/vectors/Services/design.svg',
-		id: 2,
+		id: 3,
 		title: 'UI/UX-дизайн',
 	},
 	{
 		description:
-			'Обеспечиваем бесперебойную работу и быстро решаем задачи, сохраняя ваш комфорт',
+			'Обеспечиваем бесперебойную работу проектов, внедряем ИИ-решения и быстро решаем технические задачи',
 		fromPrice: 'hours',
 		icon: '/images/Home/vectors/Services/support.svg',
-		id: 3,
-		title: 'Техническая поддержка',
-	},
-	{
-		description:
-			'Продвигаем сайты в поиске и улучшаем видимость, привлекая целевую аудиторию бизнеса',
-		fromPrice: 7000,
-		icon: '/images/Home/vectors/Services/seo.svg',
 		id: 4,
-		title: 'Продвижение и SEO',
-	},
-	{
-		description:
-			'Разрабатываем надежное ПО и алгоритмы управления для робототехники на языках C++ и Python',
-		fromPrice: 'hours',
-		icon: '/images/Home/vectors/Services/robotics.svg',
-		id: 5,
-		title: 'Разработка для робототехники на C++ и Python',
+		title: 'Техническая поддержка и ИИ',
 	},
 ]
