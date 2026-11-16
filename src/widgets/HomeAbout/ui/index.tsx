@@ -24,8 +24,9 @@ const HomeAbout: FC<Props> = ({ className }) => {
 			<div className='flex justify-between bg-primary-background gap-x-14 lg-big:pl-10 lg-big:pr-0 px-5 rounded-lg overflow-hidden'>
 				<div className='flex-1 lg-big:py-10 py-7'>
 					<UiDecorationTitle className='lg-big:text-3xl text-2xl'>
-						О компании
-					</UiDecorationTitle>
+                	Инженерная команда RAV:Coder
+                  </UiDecorationTitle>
+
 					{screenWidth < LG_BIG ? (
 						<Image
 							src='/images/Home/illustrations/About/bird2.png'
