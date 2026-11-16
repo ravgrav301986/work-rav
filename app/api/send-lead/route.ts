@@ -11,7 +11,7 @@ export async function POST(request: Request) {
 				Accept: 'application/json',
 			},
 			body: JSON.stringify({
-				access_key: 'ВСТАВЬТЕ_СЮДА_ВАШ_КЛЮЧ_ИЗ_ПИСЬМА',
+				access_key: '66b06e8a-2c03-4e2c-8bd8-d8e21e98b7ac',
 				subject: 'Новая заявка с сайта RAV:Coder',
 				from_name: 'Сайт ravcoder.ru',
 				Имя: name,
