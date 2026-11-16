@@ -5,7 +5,6 @@ export const SERVICES: TServiceItem[] = [
 		description:
 			'Создаем надежные решения для любых задач, обеспечивая рост и стабильность бизнеса',
 		fromPrice: 400000,
-		
 		icon: '/images/Home/vectors/Services/web-dev.svg',
 		id: 1,
 		title: 'Разработка веб-сайтов и приложений',
@@ -13,10 +12,10 @@ export const SERVICES: TServiceItem[] = [
 	{
 		description:
 			'Проектируем интерфейсы, где каждая деталь работает на удобство и вовлеченность клиента',
-		fromPrice: 7000  ,
+		fromPrice: 7000,
 		icon: '/images/Home/vectors/Services/design.svg',
 		id: 2,
-		title: 'UI/UX-дизайн ',
+		title: 'UI/UX-дизайн',
 	},
 	{
 		description:
@@ -33,5 +32,13 @@ export const SERVICES: TServiceItem[] = [
 		icon: '/images/Home/vectors/Services/seo.svg',
 		id: 4,
 		title: 'Продвижение и SEO',
+	},
+	{
+		description:
+			'Разрабатываем надежное ПО и алгоритмы управления для робототехники на языках C++ и Python',
+		fromPrice: 'hours',
+		icon: '/images/Home/vectors/Services/robotics.svg',
+		id: 5,
+		title: 'Разработка для робототехники на C++ и Python',
 	},
 ]
