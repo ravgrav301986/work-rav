@@ -13,15 +13,15 @@ interface Props extends TClassName {}
 
 const Form: FC<Props> = ({ className }) => {
 	const [name, setName] = useState('')
-	const [contact, setContact] = useState('')
+	const [email, setEmail] = useState('')
 	const [agreed, setAgreed] = useState(true)
 	const [isLoading, setIsLoading] = useState(false)
 
 	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
 
-		if (!name.trim() || !contact.trim()) {
-			toast.error('Пожалуйста, заполните имя и контакт для связи')
+		if (!name.trim() || !email.trim()) {
+			toast.error('Пожалуйста, заполните имя и ваш Email')
 			return
 		}
 
@@ -44,7 +44,7 @@ const Form: FC<Props> = ({ className }) => {
 					subject: 'Новая заявка с сайта RAV:Coder',
 					from_name: 'Сайт ravcoder.ru',
 					Имя: name,
-					Контакт: contact,
+					Email: email,
 				}),
 			})
 
@@ -53,7 +53,7 @@ const Form: FC<Props> = ({ className }) => {
 			if (result.success) {
 				toast.success('Заявка отправлена! Мы скоро свяжемся с вами.')
 				setName('')
-				setContact('')
+				setEmail('')
 			} else {
 				toast.error('Не удалось отправить заявку. Попробуйте позже.')
 			}
@@ -76,9 +76,10 @@ const Form: FC<Props> = ({ className }) => {
 				/>
 				<UiInput
 					wrapperClassName='md-mid:flex-initial flex-1'
-					placeholder='Телефон, Email или Telegram'
-					value={contact}
-					onChange={(e: any) => setContact(e.target.value)}
+					type='email'
+					placeholder='Ваш Email'
+					value={email}
+					onChange={(e: any) => setEmail(e.target.value)}
 					className='md-mid:max-w-[240px] min-w-[240px] w-full'
 				/>
 				<UiButton
