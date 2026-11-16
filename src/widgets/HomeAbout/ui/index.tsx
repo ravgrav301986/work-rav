@@ -11,9 +11,11 @@ import { UiTypography } from '@/shared/ui/UiTypography'
 import { useScreen } from '@/shared/hooks'
 import { LG_BIG } from '@/shared/constants/breakpoints'
 
-interface Props extends TClassName {}
+interface Props extends TClassName {
+	title?: string
+}
 
-const HomeAbout: FC<Props> = ({ className }) => {
+const HomeAbout: FC<Props> = ({ className, title = 'Инженерная команда' }) => {
 	const { screenWidth } = useScreen()
 
 	return (
@@ -24,13 +26,13 @@ const HomeAbout: FC<Props> = ({ className }) => {
 			<div className='flex justify-between bg-primary-background gap-x-14 lg-big:pl-10 lg-big:pr-0 px-5 rounded-lg overflow-hidden'>
 				<div className='flex-1 lg-big:py-10 py-7'>
 					<UiDecorationTitle className='lg-big:text-3xl text-2xl'>
-                	Инженерная команда
-                  </UiDecorationTitle>
+						{title}
+					</UiDecorationTitle>
 
 					{screenWidth < LG_BIG ? (
 						<Image
 							src='/images/Home/illustrations/About/bird2.png'
-							alt='Красивая картинка'
+							alt='Инженерная IT-студия RAV:Coder'
 							width={652}
 							height={503}
 							className='object-cover w-full max-h-[300px] rounded-lg mt-7 mb-2.5'
@@ -41,13 +43,15 @@ const HomeAbout: FC<Props> = ({ className }) => {
 						theme='fill'
 						className='uppercase md-mid:w-auto w-full text-center'
 					>
-						<UiTypography font='Montserrat-SB'><a href="https://t.me/Ravcoder">Узнать больше</a></UiTypography>
+						<UiTypography font='Montserrat-SB'>
+							<a href='https://t.me/Ravcoder'>Узнать больше</a>
+						</UiTypography>
 					</UiButton>
 				</div>
 				{screenWidth >= LG_BIG ? (
 					<Image
 						src='/images/Home/illustrations/About/bird2.png'
-						alt='Красивая картинка'
+						alt='Инженерная IT-студия RAV:Coder'
 						width={652}
 						height={503}
 						className='object-cover'
