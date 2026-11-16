@@ -4,7 +4,7 @@ import { UiContainer } from '@/shared/ui/UiContainer'
 import { cn } from '@/shared/lib/cn'
 import { UiDecorationTitle } from '@/shared/ui/UiDecorationTitle'
 import { UiTypography } from '@/shared/ui/UiTypography'
-import { EMAIL, PHONES } from '@/shared/constants/main-info'
+import { EMAIL } from '@/shared/constants/main-info'
 import { Item } from './Item'
 
 const copyTextCls = 'xs-big:w-[200px] flex-1 text-center text-[15px]'
@@ -27,27 +27,6 @@ const HomContacts: FC<Props> = ({ className }) => {
 				</UiTypography>
 				<ul className='flex flex-col gap-y-7'>
 					<Item
-						title='Номер телефона'
-						copyItems={[
-							{
-								content: (
-									<UiTypography font='Montserrat-M' className={copyTextCls}>
-										{PHONES[0].formatted}
-									</UiTypography>
-								),
-								value: PHONES[0].data,
-							},
-							{
-								content: (
-									<UiTypography font='Montserrat-M' className={copyTextCls}>
-										{PHONES[1].formatted}
-									</UiTypography>
-								),
-								value: PHONES[1].data,
-							},
-						]}
-					/>
-					<Item
 						title='Почта'
 						copyItems={[
 							{
@@ -67,3 +46,4 @@ const HomContacts: FC<Props> = ({ className }) => {
 }
 
 export { HomContacts }
+
