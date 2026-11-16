@@ -21,6 +21,9 @@ const HomeServiceItem: FC<Props> = ({
 	id,
 	title,
 }) => {
+	const imageAlt =
+		typeof title === 'string' ? `Иконка для "${title}"` : 'Иконка направления RAV:Coder'
+
 	return (
 		<Tag
 			className={cn(
@@ -31,7 +34,7 @@ const HomeServiceItem: FC<Props> = ({
 			<div className='p-5 bg-primary-background rounded-[inherit] flex flex-col w-full'>
 				<Image
 					src={icon}
-					alt={`Иконка для "${title}"`}
+					alt={imageAlt}
 					width={48}
 					height={48}
 				/>
