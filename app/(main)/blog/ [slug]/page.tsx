@@ -105,6 +105,7 @@ const BlogPostPage: FC<Props> = async ({ params }) => {
 					<UiButton theme='fill' className='uppercase w-max'>
 						<UiTypography font='Montserrat-SB'>
 							<a href='https://t.me'>Обсудить задачу</a>
+
 						</UiTypography>
 					</UiButton>
 				</div>
