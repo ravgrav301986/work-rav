@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 }
 
 const HomeAboutScreen: FC = () => {
-	return <HomeAbout />
+	return <HomeAbout title='О компании' />
 }
 
 export default HomeAboutScreen
