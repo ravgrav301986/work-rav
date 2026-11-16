@@ -21,13 +21,13 @@ const HomeHero: FC<Props> = ({ className }) => {
 				<div className='md-mid:relative z-[0] md-mid:pl-16 md-mid:pt-16 md-mid:pb-10 pb-12 md-mid:block flex flex-col justify-end h-full'>
 					<UiTypography
 						font='Montserrat-B'
-						className='md-mid:text-[40px] text-2xl '
+						className='md-mid:text-[40px] text-2xl leading-tight'
 					>
-						Мы создаём сайты
+						Разработка ПО,
 						<br />
-						и приложения, которые
+						робототехники и ИИ-решений
 						<br />
-						<span className='main-text-gradient'>работают на ваш успех!</span>
+						<span className='main-text-gradient'>для вашего бизнеса!</span>
 					</UiTypography>
 					{screenWidth >= MD_MID ? (
 						<Info className='mt-5 mb-7' />
@@ -37,7 +37,9 @@ const HomeHero: FC<Props> = ({ className }) => {
 						</UiTypography>
 					)}
 					<UiButton theme='fill-invert' className='uppercase w-max'>
-						<UiTypography font='Montserrat-SB'><a href="https://t.me/Ravcoderbot_bot">Заказать проект</a></UiTypography>
+						<UiTypography font='Montserrat-SB'>
+							<a href='https://t.me/Ravcoderbot_bot'>Заказать проект</a>
+						</UiTypography>
 					</UiButton>
 					<Image
 						src={
@@ -45,7 +47,7 @@ const HomeHero: FC<Props> = ({ className }) => {
 								? '/images/Home/backgrounds/Hero/main-bg.png'
 								: '/images/Home/backgrounds/Hero/main-bg-mobile.png'
 						}
-						alt='Главный фон'
+						alt='Разработка ПО, робототехники и ИИ-решений RAV:Coder'
 						width={screenWidth >= MD_MID ? 1440 : 380}
 						height={screenWidth >= MD_MID ? 450 : 555}
 						className={cn(
