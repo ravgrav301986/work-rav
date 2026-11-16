@@ -24,7 +24,7 @@ const Footer: FC<Props> = ({ className }) => {
 					font='Montserrat-L'
 					className='xs-big:text-[15px] text-xs mt-12'
 				>
-		    	© 2024 - {new Date().getFullYear()} “Ravcoder”. Все права защищены.
+		    	© 2024 - {new Date().getFullYear()} “Rav:coder”. Все права защищены.
 
 				</UiTypography>
 			</UiContainer>
