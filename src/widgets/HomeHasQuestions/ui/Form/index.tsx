@@ -1,105 +1,42 @@
 'use client'
 
-import { FC, FormEvent, useState } from 'react'
+import { FC } from 'react'
 import { TClassName } from '@/shared/types/shared'
 import { cn } from '@/shared/lib/cn'
-import { UiInput } from '@/shared/ui/UiInput'
 import { UiButton } from '@/shared/ui/UiButton'
 import { UiTypography } from '@/shared/ui/UiTypography'
-import { UiCheckbox } from '@/shared/ui/UiCheckbox'
 import { toast } from 'react-toastify'
 
 interface Props extends TClassName {}
 
 const Form: FC<Props> = ({ className }) => {
-	const [name, setName] = useState('')
-	const [email, setEmail] = useState('')
-	const [agreed, setAgreed] = useState(true)
-	const [isLoading, setIsLoading] = useState(false)
+	const email = 'ravcoder@yandex.ru'
 
-	const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-		e.preventDefault()
-
-		if (!name.trim() || !email.trim()) {
-			toast.error('Пожалуйста, заполните имя и ваш Email')
-			return
-		}
-
-		if (!agreed) {
-			toast.error('Необходимо согласие на обработку персональных данных')
-			return
-		}
-
-		setIsLoading(true)
-
-		try {
-			const response = await fetch('/api/send-lead', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({ name, email }),
-			})
-
-			const result = await response.json()
-
-			if (result.success) {
-				toast.success('Заявка отправлена! Мы скоро свяжемся с вами.')
-				setName('')
-				setEmail('')
-			} else {
-				toast.error('Не удалось отправить заявку. Попробуйте позже.')
-			}
-		} catch {
-			toast.error('Ошибка сети. Попробуйте позже.')
-		} finally {
-			setIsLoading(false)
-		}
+	const handleCopy = () => {
+		navigator.clipboard.writeText(email)
+		toast.success('Почта ravcoder@yandex.ru скопирована!')
 	}
 
 	return (
-		<form onSubmit={handleSubmit} className={cn('', className)}>
-			<div className='flex gap-5 flex-wrap'>
-				<UiInput
-					wrapperClassName='md-mid:flex-initial flex-1'
-					placeholder='Имя'
-					value={name}
-					onChange={(e: any) => setName(e.target.value)}
-					className='md-mid:max-w-[240px] min-w-[240px] w-full'
-				/>
-				<UiInput
-					wrapperClassName='md-mid:flex-initial flex-1'
-					type='email'
-					placeholder='Ваш Email'
-					value={email}
-					onChange={(e: any) => setEmail(e.target.value)}
-					className='md-mid:max-w-[240px] min-w-[240px] w-full'
-				/>
-				<UiButton
-					type='submit'
-					theme='fill'
-					disabled={isLoading}
-					className='md-low:max-w-[200px] w-full text-center'
-				>
-					<UiTypography font='Montserrat-SB'>
-						{isLoading ? 'Отправка...' : 'Отправить'}
-					</UiTypography>
-				</UiButton>
-			</div>
-			<UiCheckbox
-				className='mt-4'
-				checked={agreed}
-				onChange={(e: any) => setAgreed(e.target.checked)}
-				label={
-					<>
-						Нажимая на кнопку "Отправить", я даю{' '}
-						<span className='underline decoration-third-text underline-offset-2'>
-							согласие на обработку персональных данных
-						</span>
-					</>
-				}
-			/>
-		</form>
+		<div className={cn('flex items-center gap-4 flex-wrap', className)}>
+			<a
+				href={`mailto:${email}`}
+				className='px-5 py-3.5 rounded-lg bg-[#1E242D] border border-[#A1AEBF]/30 text-white hover:border-blue-400 transition-colors'
+			>
+				<UiTypography font='Montserrat-M' className='text-base'>
+					{email}
+				</UiTypography>
+			</a>
+
+			<UiButton
+				type='button'
+				theme='fill'
+				onClick={handleCopy}
+				className='md-low:max-w-[220px] w-full text-center'
+			>
+				<UiTypography font='Montserrat-SB'>Скопировать почту</UiTypography>
+			</UiButton>
+		</div>
 	)
 }
 
