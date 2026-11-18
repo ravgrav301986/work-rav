@@ -1,3 +1,4 @@
+
 import { FC } from 'react'
 import { TClassName } from '@/shared/types/shared'
 import { cn } from '@/shared/lib/cn'
@@ -9,7 +10,7 @@ interface Props extends TClassName {}
 const Content: FC<Props> = ({ className }) => {
 	return (
 		<ul className={cn('flex flex-col gap-y-5', className)}>
-			<ContentItem>
+			<ContentItem icon='/images/Home/vectors/Services/web-dev.svg' size={26}>
 				Мы — команда инженеров и разработчиков, специализирующихся{' '}
 				<UiTypography font='Montserrat-M' tag='span'>
 					на разработке ПО на заказ (C++, Python), программировании робототехники
@@ -38,7 +39,7 @@ const Content: FC<Props> = ({ className }) => {
 				— создаём умных ассистентов, системы распознавания и инструменты
 				интеллектуального анализа данных.
 			</ContentItem>
-			<ContentItem>
+			<ContentItem icon='/images/dog.png' size={34}>
 				Берём на себя самые нестандартные задачи —{' '}
 				<UiTypography font='Montserrat-M' tag='span'>
 					от управления реальными роботами до запуска высоконагруженных

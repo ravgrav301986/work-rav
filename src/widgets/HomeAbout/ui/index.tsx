@@ -24,6 +24,14 @@ const HomeAbout: FC<Props> = ({
 }) => {
 	const { screenWidth } = useScreen()
 
+	const illustrationSrc = isTeamBlock
+		? '/images/dog.png'
+		: '/images/Home/illustrations/About/mini-robot.png'
+
+	const illustrationAlt = isTeamBlock
+		? 'Робопёс и инженерная команда RAV:Coder'
+		: 'Инженерная IT-студия RAV:Coder'
+
 	return (
 		<UiContainer tag='section' className={cn('', className)}>
 			<div className='flex justify-between bg-primary-background gap-x-14 lg-big:pl-10 lg-big:pr-0 px-5 rounded-lg overflow-hidden'>
@@ -34,11 +42,14 @@ const HomeAbout: FC<Props> = ({
 
 					{screenWidth < LG_BIG ? (
 						<Image
-							src='/images/Home/illustrations/About/bird2.png'
-							alt='Инженерная IT-студия RAV:Coder'
+							src={illustrationSrc}
+							alt={illustrationAlt}
 							width={652}
 							height={503}
-							className='object-cover w-full max-h-[300px] rounded-lg mt-7 mb-2.5'
+							className={cn(
+								'w-full max-h-[300px] rounded-lg mt-7 mb-2.5',
+								isTeamBlock ? 'object-contain bg-secondary-background/30 p-2' : 'object-cover'
+							)}
 						/>
 					) : null}
 
@@ -68,7 +79,7 @@ const HomeAbout: FC<Props> = ({
 								результат.
 							</ContentItem>
 							<ContentItem>
-								Строим процесс по прозрачным спринтам с регулярными демонстрациями,{' '}
+								Строим процесс по прозрачным этапам с регулярными демонстрациями,{' '}
 								<UiTypography font='Montserrat-M' tag='span'>
 									соблюдаем NDA и передаём 100% прав на исходный код
 								</UiTypography>{' '}
@@ -92,14 +103,21 @@ const HomeAbout: FC<Props> = ({
 						className='uppercase md-mid:w-auto w-full text-center'
 					>
 						<UiTypography font='Montserrat-SB'>
-							<a href='https://t.me'>Узнать больше</a>
+							<a
+								href='https://t.me'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Узнать больше
+							</a>
 						</UiTypography>
 					</UiButton>
 				</div>
+
 				{screenWidth >= LG_BIG ? (
 					<Image
-						src='/images/Home/illustrations/About/bird2.png'
-						alt='Инженерная IT-студия RAV:Coder'
+						src={illustrationSrc}
+						alt={illustrationAlt}
 						width={652}
 						height={503}
 						className='object-cover'

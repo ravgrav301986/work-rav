@@ -21,22 +21,32 @@ const BlogScreen: FC = () => {
 				<UiDecorationTitle className='md-mid:text-3xl text-2xl'>
 					Блог
 				</UiDecorationTitle>
-				<ul className='grid lg-big:grid-cols-4 md-mid:grid-cols-2 xs-big:gap-5 gap-y-2.5 mt-5'>
+				<ul className='grid lg-big:grid-cols-4 md-mid:grid-cols-2 xs-big:gap-5 gap-y-4 mt-6'>
 					{BLOG_POSTS.map(post => (
 						<li
 							key={post.id}
-							className='flex flex-col justify-between p-5 rounded-lg bg-secondary-background/40 border border-white/5'
+							className='group flex flex-col justify-between p-4 rounded-lg bg-secondary-background/40 border border-white/5 hover:border-sky-400/30 transition-colors'
 						>
 							<div>
-								<div className='flex items-center justify-between gap-2 mb-4'>
-									<Image
-										src={post.icon}
-										alt={post.plainTitle}
-										width={36}
-										height={36}
-									/>
-									<span className='text-xs opacity-60'>{post.readTime}</span>
+								{post.image ? (
+									<Link
+										href={`/blog/${post.slug}`}
+										className='block relative w-full h-44 mb-4 rounded-md overflow-hidden bg-white'
+									>
+										<Image
+											src={post.image}
+											alt={post.plainTitle}
+											fill
+											className='object-contain p-2 group-hover:scale-105 transition-transform duration-300'
+										/>
+									</Link>
+								) : null}
+
+								<div className='flex items-center justify-between gap-2 mb-3 text-xs opacity-60'>
+									<span>{post.date}</span>
+									<span>{post.readTime}</span>
 								</div>
+
 								<UiTypography
 									tag='h2'
 									font='Montserrat-SB'

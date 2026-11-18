@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { Metadata } from 'next'
 import { TChildren } from '@/shared/types/shared'
 import { MainLayout } from '@/app/layouts/Main'
+import { CookieBanner } from '@/shared/ui/CookieBanner'
 
 export const metadata: Metadata = {
 	title: {
@@ -32,7 +33,9 @@ export const metadata: Metadata = {
 interface Props extends TChildren {}
 
 const Layout: FC<Props> = ({ children }) => {
-	return <MainLayout>{children}</MainLayout>
+	return <MainLayout>{children}
+	<CookieBanner />
+	</MainLayout>
 }
 
 export default Layout

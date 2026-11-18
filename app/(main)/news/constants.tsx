@@ -5,6 +5,7 @@ export interface TNewsItem {
 	title: ReactNode
 	description: ReactNode
 	icon: string
+	image?: string
 }
 
 export const NEWS_POSTS: TNewsItem[] = [
@@ -27,6 +28,7 @@ export const NEWS_POSTS: TNewsItem[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
+		image: '/images/News/news1.png',
 	},
 	{
 		id: 2,
@@ -45,6 +47,7 @@ export const NEWS_POSTS: TNewsItem[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
+		image: '/images/News/image2.png',
 	},
 	{
 		id: 3,
@@ -63,6 +66,7 @@ export const NEWS_POSTS: TNewsItem[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
+		image: '/images/News/news3.png',
 	},
 	{
 		id: 4,
@@ -80,5 +84,6 @@ export const NEWS_POSTS: TNewsItem[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
+		image: '/images/News/image4.png',
 	},
 ]

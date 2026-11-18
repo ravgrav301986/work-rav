@@ -1,6 +1,7 @@
 'use client'
 
 import { FC } from 'react'
+import Link from 'next/link'
 import { TClassName } from '@/shared/types/shared'
 import { cn } from '@/shared/lib/cn'
 import { UiButton } from '@/shared/ui/UiButton'
@@ -18,12 +19,17 @@ const Form: FC<Props> = ({ className }) => {
 	}
 
 	return (
-		<div className={cn('flex items-center gap-4 flex-wrap', className)}>
+		<div
+			className={cn(
+				'grid grid-cols-1 md-low:grid-cols-3 gap-4 w-full max-w-[740px]',
+				className
+			)}
+		>
 			<a
 				href={`mailto:${email}`}
-				className='px-5 py-3.5 rounded-lg bg-[#1E242D] border border-[#A1AEBF]/30 text-white hover:border-blue-400 transition-colors'
+				className='h-[52px] px-4 rounded-lg bg-[#1E242D] border border-[#A1AEBF]/30 text-white hover:border-blue-400 transition-colors flex items-center justify-center text-center'
 			>
-				<UiTypography font='Montserrat-M' className='text-base'>
+				<UiTypography font='Montserrat-M' className='text-[15px]'>
 					{email}
 				</UiTypography>
 			</a>
@@ -32,12 +38,25 @@ const Form: FC<Props> = ({ className }) => {
 				type='button'
 				theme='fill'
 				onClick={handleCopy}
-				className='md-low:max-w-[220px] w-full text-center'
+				className='!h-[52px] !w-full !max-w-none flex items-center justify-center text-center'
 			>
-				<UiTypography font='Montserrat-SB'>Скопировать почту</UiTypography>
+				<UiTypography font='Montserrat-SB' className='text-[15px]'>
+					Скопировать почту
+				</UiTypography>
 			</UiButton>
+
+			<Link
+				href='/contacts'
+				className='h-[52px] px-4 rounded-lg bg-[#1E242D] border border-sky-400/35 hover:border-cyan-400 transition-colors flex items-center justify-center text-center'
+			>
+				<UiTypography font='Montserrat-SB' className='text-[15px] main-text-gradient'>
+					Условия работы 
+				</UiTypography>
+			</Link>
 		</div>
 	)
 }
 
 export { Form }
+
+

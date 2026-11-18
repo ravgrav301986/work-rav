@@ -3,6 +3,7 @@ import { TServiceItem } from '@/entities/HomeServiceItem/types/Service'
 export interface IBlogPost extends TServiceItem {
 	slug: string
 	link?: string
+	image?: string
 	plainTitle: string
 	plainDescription: string
 	date: string
@@ -13,7 +14,6 @@ export interface IBlogPost extends TServiceItem {
 		bullets?: string[]
 	}[]
 }
-
 
 export const BLOG_POSTS: IBlogPost[] = [
 	{
@@ -36,6 +36,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
+		image: '/images/Blog/blog-ai-interface.png',
 		link: '/blog/cpp-or-python-for-robots',
 		date: '17 ноября 2026',
 		readTime: '6 мин чтения',
@@ -80,6 +81,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
+		image: '/images/Blog/blog-ai-interface.png',
 		link: '/blog/computer-vision-how-it-works',
 		date: '15 ноября 2026',
 		readTime: '5 мин чтения',
@@ -119,6 +121,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
+		image: '/images/Blog/blog-ai-interface.png',
 		link: '/blog/ai-assistants-for-business',
 		date: '12 ноября 2026',
 		readTime: '5 мин чтения',
@@ -134,42 +137,48 @@ export const BLOG_POSTS: IBlogPost[] = [
 			},
 		],
 	},
-	{
+		{
 		id: 4,
-		slug: 'why-nextjs-and-typescript',
-		plainTitle: 'Почему современные сайты создают на Next.js и TypeScript',
+		slug: 'why-nextjs-typescript-and-php',
+		plainTitle: 'Next.js, TypeScript и современный PHP: идеальный стек для веб-проектов',
 		plainDescription:
-			'Сравниваем современный стек разработки с устаревшими конструкторами: разбираем влияние скорости загрузки и чистого кода на продажи и позиции в поиске.',
+			'Разбираем архитектуру современных веб-платформ: как связка быстрого фронтенда на Next.js и надёжного серверного PHP (Laravel, Symfony) ускоряет запуск и рост бизнеса.',
 		title: (
 			<>
-				Почему современные сайты создают на{' '}
-				<span className='main-text-gradient'>Next.js и TypeScript</span>
+				<span className='main-text-gradient'>Next.js, TypeScript и PHP</span>:
+				идеальный стек для современных веб-проектов
 			</>
 		),
 		description: (
 			<>
-				Сравниваем современный стек разработки с устаревшими конструкторами:
-				разбираем влияние{' '}
-				<span className='main-text-gradient'>скорости загрузки</span> и чистого
-				кода на продажи и позиции в поиске.
+				Разбираем архитектуру веб-платформ: как связка быстрого фронтенда на{' '}
+				<span className='main-text-gradient'>Next.js и TypeScript</span> с
+				надёжным бэкендом на PHP ускоряет запуск и рост бизнеса.
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
-		link: '/blog/why-nextjs-and-typescript',
+		image: '/images/Blog/blog-frameworks.png',
+		link: '/blog/why-nextjs-typescript-and-php',
 		date: '10 ноября 2026',
-		readTime: '4 мин чтения',
+		readTime: '5 мин чтения',
 		content: [
 			{
-				subtitle: 'Преимущества серверного рендеринга (SSR) и строгой типизации',
-				text: 'Для сложных веб-сервисов, личных кабинетов и высоконагруженных порталов шаблонные конструкторы быстро становятся узким горлышком.',
+				subtitle: 'Разделение ответственности: скорость интерфейса и мощь сервера',
+				text: 'Для сложных веб-сервисов, личных кабинетов и коммерческих порталов шаблонные конструкторы быстро становятся узким горлышком. Мы строим проекты на разделённой архитектуре, где каждый инструмент отвечает за свою зону.',
 				bullets: [
-					'Мгновенная загрузка страниц и отличные показатели Core Web Vitals для роста в Яндексе и Google.',
-					'TypeScript исключает целый класс ошибок ещё на этапе написания кода.',
-					'Лёгкая интеграция с любыми API, нейросетевыми бэкендами на Python и платёжными шлюзами.',
+					'Next.js и TypeScript (фронтенд) — мгновенная загрузка страниц (SSR), высокие позиции в Яндексе и Google и защита от ошибок ещё на этапе написания кода.',
+					'PHP 8, Laravel и Symfony (бэкенд) — надёжная серверная логика, высокая скорость разработки REST API, работа с базами данных PostgreSQL и кэшем Redis.',
+					'Гибкие интеграции — бесшовное подключение 1С, Bitrix24, amoCRM, платёжных шлюзов и нейросетевых сервисов на Python.',
 				],
 			},
+			{
+				subtitle: 'Выгода для бизнеса при запуске и масштабировании',
+				text: 'Такой стек позволяет быстро запустить первую рабочую версию продукта без лишних затрат на серверную инфраструктуру, а при росте трафика — легко масштабировать фронтенд и бэкенд независимо друг от друга.',
+			},
 		],
-	},	{
+	},
+
+	{
 		id: 5,
 		slug: 'ui-ux-design-5-rules',
 		plainTitle: 'UI/UX-дизайн, который продаёт: 5 правил удобного интерфейса',
@@ -189,6 +198,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
+		image: '/images/Blog/blog-fonts.png',
 		link: '/blog/ui-ux-design-5-rules',
 		date: '8 ноября 2026',
 		readTime: '4 мин чтения',
@@ -224,6 +234,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
+		image: '/images/Blog/blog-frameworks.png',
 		link: '/blog/how-to-write-technical-specification',
 		date: '5 ноября 2026',
 		readTime: '5 мин чтения',
@@ -259,6 +270,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
+		image: '/images/Blog/blog-ai-interface.png',
 		link: '/blog/technical-seo-optimization-from-scratch',
 		date: '3 ноября 2026',
 		readTime: '4 мин чтения',
@@ -294,6 +306,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
+		image: '/images/Blog/blog-ai-security.png',
 		link: '/blog/web-security-server-checklist',
 		date: '1 ноября 2026',
 		readTime: '4 мин чтения',
@@ -310,4 +323,3 @@ export const BLOG_POSTS: IBlogPost[] = [
 		],
 	},
 ]
-

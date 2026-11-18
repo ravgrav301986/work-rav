@@ -4,16 +4,25 @@ import { cn } from '@/shared/lib/cn'
 import { UiTypography } from '@/shared/ui/UiTypography'
 import Image from 'next/image'
 
-interface Props extends TClassName, TChildren {}
+interface Props extends TClassName, TChildren {
+	icon?: string
+	size?: number
+}
 
-const ContentItem: FC<Props> = ({ className, children }) => {
+const ContentItem: FC<Props> = ({
+	className,
+	children,
+	icon = '/images/Home/vectors/About/verif-checkmark.png',
+	size = 24,
+}) => {
 	return (
-		<li className={cn('text-lg flex items-start gap-x-2.5', className)}>
+		<li className={cn('text-lg flex items-start gap-x-3', className)}>
 			<Image
-				src='/images/Home/vectors/About/verif-checkmark.png'
-				alt='Почему мы?'
-				width={20}
-				height={20}
+				src={icon}
+				alt='Преимущество RAV:Coder'
+				width={size}
+				height={size}
+				className='mt-0.5 shrink-0 object-contain'
 			/>
 			<UiTypography font='Montserrat-L'>{children}</UiTypography>
 		</li>
