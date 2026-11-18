@@ -36,7 +36,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
-		image: '/images/Blog/blog-ai-interface.png',
+		image: '/images/blog/blog-ai-interface.png',
 		link: '/blog/cpp-or-python-for-robots',
 		date: '17 ноября 2026',
 		readTime: '6 мин чтения',
@@ -81,7 +81,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
-		image: '/images/Blog/blog-ai-interface.png',
+		image: '/images/blog/blog-ai-interface.png',
 		link: '/blog/computer-vision-how-it-works',
 		date: '15 ноября 2026',
 		readTime: '5 мин чтения',
@@ -121,7 +121,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
-		image: '/images/Blog/blog-ai-interface.png',
+		image: '/images/blog/blog-ai-interface.png',
 		link: '/blog/ai-assistants-for-business',
 		date: '12 ноября 2026',
 		readTime: '5 мин чтения',
@@ -157,7 +157,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
-		image: '/images/Blog/blog-frameworks.png',
+		image: '/images/blog/blog-frameworks.png',
 		link: '/blog/why-nextjs-typescript-and-php',
 		date: '10 ноября 2026',
 		readTime: '5 мин чтения',
@@ -198,7 +198,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
-		image: '/images/Blog/blog-fonts.png',
+		image: '/images/blog/blog-fonts.png',
 		link: '/blog/ui-ux-design-5-rules',
 		date: '8 ноября 2026',
 		readTime: '4 мин чтения',
@@ -234,7 +234,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
-		image: '/images/Blog/blog-frameworks.png',
+		image: '/images/blog/blog-frameworks.png',
 		link: '/blog/how-to-write-technical-specification',
 		date: '5 ноября 2026',
 		readTime: '5 мин чтения',
@@ -270,7 +270,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
-		image: '/images/Blog/blog-ai-interface.png',
+		image: '/images/blog/blog-ai-interface.png',
 		link: '/blog/technical-seo-optimization-from-scratch',
 		date: '3 ноября 2026',
 		readTime: '4 мин чтения',
@@ -306,7 +306,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
-		image: '/images/Blog/blog-ai-security.png',
+		image: '/images/blog/blog-ai-security.png',
 		link: '/blog/web-security-server-checklist',
 		date: '1 ноября 2026',
 		readTime: '4 мин чтения',
