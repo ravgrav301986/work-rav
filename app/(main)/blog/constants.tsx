@@ -177,7 +177,6 @@ export const BLOG_POSTS: IBlogPost[] = [
 			},
 		],
 	},
-
 	{
 		id: 5,
 		slug: 'ui-ux-design-5-rules',
@@ -198,7 +197,7 @@ export const BLOG_POSTS: IBlogPost[] = [
 			</>
 		),
 		icon: '/images/Home/vectors/Services/web-dev.svg',
-		image: '/images/blog/blog-fonts.png',
+		image: '/images/blog/blog-ai-fonts.png',
 		link: '/blog/ui-ux-design-5-rules',
 		date: '8 ноября 2026',
 		readTime: '4 мин чтения',
@@ -214,6 +213,8 @@ export const BLOG_POSTS: IBlogPost[] = [
 			},
 		],
 	},
+
+	
 	{
 		id: 6,
 		slug: 'how-to-write-technical-specification',
