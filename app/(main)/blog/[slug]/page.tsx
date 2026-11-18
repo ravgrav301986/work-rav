@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Metadata } from 'next'
 import { UiContainer } from '@/shared/ui/UiContainer'
 import { UiTypography } from '@/shared/ui/UiTypography'
@@ -59,6 +60,18 @@ const BlogPostPage: FC<Props> = async ({ params }) => {
 					{post.title}
 				</UiTypography>
 
+				{post.image && (
+					<div className='relative w-full md-mid:h-[380px] h-[220px] rounded-xl overflow-hidden mb-8 border border-sky-400/20'>
+						<Image
+							src={post.image}
+							alt={post.plainTitle}
+							fill
+							priority
+							className='object-cover'
+						/>
+					</div>
+				)}
+
 				<UiTypography
 					font='Montserrat-M'
 					className='text-lg opacity-90 mb-8 leading-relaxed'
@@ -104,7 +117,13 @@ const BlogPostPage: FC<Props> = async ({ params }) => {
 					</div>
 					<UiButton theme='fill' className='uppercase w-max'>
 						<UiTypography font='Montserrat-SB'>
-							<a href='https://t.me'>Обсудить задачу</a>
+							<a
+								href='https://t.me'
+								target='_blank'
+								rel='noopener noreferrer'
+							>
+								Обсудить задачу
+							</a>
 						</UiTypography>
 					</UiButton>
 				</div>
