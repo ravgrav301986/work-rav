@@ -1,9 +1,10 @@
 import type { MetadataRoute } from 'next'
+import { BLOG_POSTS } from './(main)/blog/constants'
 
 export default function sitemap(): MetadataRoute.Sitemap {
 	const baseUrl = 'https://ravcoder.ru'
 
-	return [
+	const staticPages: MetadataRoute.Sitemap = [
 		{
 			url: baseUrl,
 			lastModified: new Date(),
@@ -34,5 +35,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			lastModified: new Date(),
 			priority: 0.7,
 		},
+		{
+			url: `${baseUrl}/privacy-policy`,
+			lastModified: new Date(),
+			priority: 0.4,
+		},
 	]
+
+	const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map(post => ({
+		url: `${baseUrl}/blog/${post.slug}`,
+		lastModified: new Date(),
+		priority: 0.7,
+	}))
+
+	return [...staticPages, ...blogPages]
 }
