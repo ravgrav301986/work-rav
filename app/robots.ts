@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
 			allow: '/',
 		},
 		host: 'https://ravcoder.ru',
-		sitemap: 'https://ravcoder.ru',
+		sitemap: 'https://ravcoder.ru/sitemap.xml',
 	}
 }
