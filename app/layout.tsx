@@ -1,18 +1,17 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
 import { ThemeLayout } from '@/app/layouts/Theme'
 import { ToastContainer, Slide } from 'react-toastify'
-import Head from 'next/head'
-
 
 export const metadata: Metadata = {
-	title: 'Ravcoder',
+	title: 'RAV:Coder — Робототехника на C++ и Python, нейросети и веб-разработка',
 	description:
-		'Профессиональная разработка веб-сайтов и мобильных приложений для бизнеса. Создаем удобные, функциональные и стильные цифровые продукты с индивидуальным подходом. Полный цикл услуг: проектирование UI/UX, программирование, оптимизация и поддержка.',
-	 other: {
-    ['yandex-verification']: 'e30a47380f9a2208',
-	 ['google-site-verification']: '_EiG94FPoBoK8WMppe9gBnO6jORUyFy--VP2jtWsdOc'
-  },
+		'Инженерная IT-студия RAV:Coder: программирование робототехники на C++ и Python, компьютерное зрение, внедрение ИИ-решений для бизнеса и разработка веб-платформ под ключ в Москве и по всей России.',
+	other: {
+		['yandex-verification']: 'e30a47380f9a2208',
+		['google-site-verification']: '_EiG94FPoBoK8WMppe9gBnO6jORUyFy--VP2jtWsdOc',
+	},
 }
 
 export default function RootLayout({
@@ -22,13 +21,33 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='ru'>
-			<Head>
-		    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-			<meta name="yandex-verification" content="e30a47380f9a2208" />
-			<meta name="google-site-verification" content="_EiG94FPoBoK8WMppe9gBnO6jORUyFy--VP2jtWsdOc" />
-			 <link  rel="icon" href="https://ravcoder.ru/favicon.ico" type="image/x-icon" ></link>
-           </Head>
 			<body>
+				<Script id='yandex-metrika' strategy='afterInteractive'>
+					{`
+						(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+						m[i].l=1*new Date();
+						for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+						k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+						(window, document, "script", "https://yandex.ru", "ym");
+
+						ym(101718173, "init", {
+							clickmap:true,
+							trackLinks:true,
+							accurateTrackBounce:true,
+							webvisor:true
+						});
+					`}
+				</Script>
+				<noscript>
+					<div>
+						<img
+							src='https://yandex.ru'
+							style={{ position: 'absolute', left: '-9999px' }}
+							alt=''
+						/>
+					</div>
+				</noscript>
+
 				<ThemeLayout>{children}</ThemeLayout>
 				<div id='modals' style={{ position: 'relative', zIndex: 100 }}></div>
 				<ToastContainer
